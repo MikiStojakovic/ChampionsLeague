@@ -3,3 +3,11 @@
 ################################################################################
 
 /.vs/ChampionsLeague/v15/.suo
+*.suo
+/ChampionsLeague/ChampionsLeague/bin
+/ChampionsLeague/ChampionsLeague/obj/Debug
+/ChampionsLeague/ChampionsLeague.Tests/obj/Debug
+/ChampionsLeague/packages
+/.vs/slnx.sqlite
+/.vs
+/ChampionsLeague/.vs
