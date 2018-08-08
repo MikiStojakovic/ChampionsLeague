@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,9 +14,14 @@ namespace ChampionsLeague.Development
         {
             Console.Title = "Champions League";
 
+            var hostUrl = ConfigurationManager.AppSettings["hostUrl"];
+
             using (var app = new ChampionsLeagueAgent())
             {
                 app.Start();
+                Console.WriteLine("Champions League Agent Started on url: \"{0}\"", hostUrl);
+                
+                Console.ReadKey();
             }
         }
     }
