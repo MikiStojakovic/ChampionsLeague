@@ -19,6 +19,11 @@ namespace ChampionsLeague
             _webApp = WebApp.Start(hmiHostUrl, app => BuildApp(app, publicDirectoryPath));
         }
 
+        public static IDisposable Start(string hostUrl, string publicDirectoryPath)
+        {
+            return new ChampionsLeagueWebApp(hostUrl, publicDirectoryPath);
+        }
+
         private static void BuildApp(IAppBuilder app, string publicDirectoryPath)
         {
             var container = IoCConfiguration.CreateIoCContainer();

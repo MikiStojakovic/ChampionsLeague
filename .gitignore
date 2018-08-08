@@ -12,3 +12,7 @@
 /.vs
 /ChampionsLeague/.vs
 /ChampionsLeague/ChampionsLeague.Tests/bin/Debug
+/ChampionsLeague/ChampionsLeague.Development/bin/Debug
+/ChampionsLeague/ChampionsLeague.Development/obj/Debug
+/ChampionsLeague/ChampiornsLeague.Agent/bin/Debug
+/ChampionsLeague/ChampiornsLeague.Agent/obj/Debug

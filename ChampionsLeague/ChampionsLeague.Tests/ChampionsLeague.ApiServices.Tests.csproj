@@ -74,9 +74,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ChampionsLeague\ChampionsLeague.csproj">
+    <ProjectReference Include="..\ChampionsLeague\ChampionsLeague.ApiServices.csproj">
       <Project>{65C0CEFB-0DE8-41F0-935F-CD505267B884}</Project>
-      <Name>ChampionsLeague</Name>
+      <Name>ChampionsLeague.ApiServices</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
