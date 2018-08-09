@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\ILeagueAgent.cs" />
+    <Compile Include="Models\CompetitorResult.cs" />
     <Compile Include="Models\GameResult.cs" />
+    <Compile Include="Models\TableOrder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
