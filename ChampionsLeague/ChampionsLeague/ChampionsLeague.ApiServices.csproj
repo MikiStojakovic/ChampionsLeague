@@ -129,6 +129,13 @@
     <Content Include="public-src\src\favicon.ico" />
     <Content Include="public-src\src\index.html" />
     <Content Include="public-src\src\styles.css" />
+    <Content Include="public\favicon.ico" />
+    <Content Include="public\index.html" />
+    <Content Include="public\inline.bundle.js" />
+    <Content Include="public\main.bundle.js" />
+    <Content Include="public\polyfills.bundle.js" />
+    <Content Include="public\styles.bundle.js" />
+    <Content Include="public\vendor.bundle.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +163,11 @@
     <Content Include="public-src\tsconfig.json" />
     <Content Include="public-src\tslint.json" />
     <Content Include="public-src\start_build.bat" />
+    <Content Include="public\inline.bundle.js.map" />
+    <Content Include="public\main.bundle.js.map" />
+    <Content Include="public\polyfills.bundle.js.map" />
+    <Content Include="public\styles.bundle.js.map" />
+    <Content Include="public\vendor.bundle.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -165,7 +177,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="public\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="public-src\e2e\app.e2e-spec.ts" />
