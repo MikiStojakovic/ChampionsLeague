@@ -23,9 +23,9 @@ namespace ChampiornsLeague.Agent
             
         }
 
-        public void ProcessGameResults(IEnumerable<GameResult> gameResults)
+        public bool ProcessGameResults(IEnumerable<GameResult> gameResults)
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

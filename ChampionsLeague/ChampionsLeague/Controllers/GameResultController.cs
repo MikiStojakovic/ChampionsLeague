@@ -4,12 +4,20 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using ChampionsLeague.Common.Abstract;
 using ChampionsLeague.Common.Models;
 
 namespace ChampionsLeague.Controllers
 {
     public class GameResultController : ApiController
     {
+        private ILeagueAgent _agent;
+
+        public GameResultController(ILeagueAgent agent)
+        {
+            _agent = agent;
+        }
+
         // GET api/<controller>
         public IEnumerable<string> Get()
         {
@@ -23,11 +31,12 @@ namespace ChampionsLeague.Controllers
         }
 
         // POST api/<controller>
-        public IHttpActionResult Post([FromBody]GameResult gameResult)
+        public IHttpActionResult Post([FromBody]IEnumerable<GameResult> gameResults)
         {
             try
             {
-                return gameResult as GameResult == null ? BadRequest() as IHttpActionResult : Ok();
+                var result = _agent.ProcessGameResults(gameResults);
+                return Ok(result);
             }
             catch (Exception ex)
             {

@@ -1,5 +1,7 @@
 ﻿using Autofac;
 using Autofac.Integration.WebApi;
+using ChampionsLeague.Common.Abstract;
+using ChampiornsLeague.Agent;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,9 +35,10 @@ namespace ChampionsLeague.Configuration
 
         private static void RegisterDependencies(ContainerBuilder builder)
         {
-            //builder
-            //    .RegisterType<LocalizationRepository>()
-            //    .As<ILocalizationRepository>();
+            builder
+                .RegisterType<ChampionsLeagueAgent>()
+                .As<ILeagueAgent>()
+                .SingleInstance();
         }
         }
 }

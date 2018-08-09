@@ -82,6 +82,10 @@
       <Project>{65C0CEFB-0DE8-41F0-935F-CD505267B884}</Project>
       <Name>ChampionsLeague.ApiServices</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ChampiornsLeague.Agent\ChampiornsLeague.Agent.csproj">
+      <Project>{2bf3dc54-ced8-4c28-89a9-d2382449c468}</Project>
+      <Name>ChampiornsLeague.Agent</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

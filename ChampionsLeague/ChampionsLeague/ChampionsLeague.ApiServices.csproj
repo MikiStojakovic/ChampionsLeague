@@ -198,6 +198,10 @@
       <Project>{7d4d3746-55a8-4c76-97ba-1838f24794e7}</Project>
       <Name>ChampionsLeague.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ChampiornsLeague.Agent\ChampiornsLeague.Agent.csproj">
+      <Project>{2bf3dc54-ced8-4c28-89a9-d2382449c468}</Project>
+      <Name>ChampiornsLeague.Agent</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
