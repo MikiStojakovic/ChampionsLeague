@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChampionsLeague.Development
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChampiornsLeague.Agent", "ChampiornsLeague.Agent\ChampiornsLeague.Agent.csproj", "{2BF3DC54-CED8-4C28-89A9-D2382449C468}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChampionsLeague.Common", "ChampionsLeague.Common\ChampionsLeague.Common.csproj", "{7D4D3746-55A8-4C76-97BA-1838F24794E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{2BF3DC54-CED8-4C28-89A9-D2382449C468}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BF3DC54-CED8-4C28-89A9-D2382449C468}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BF3DC54-CED8-4C28-89A9-D2382449C468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D4D3746-55A8-4C76-97BA-1838F24794E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D4D3746-55A8-4C76-97BA-1838F24794E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D4D3746-55A8-4C76-97BA-1838F24794E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D4D3746-55A8-4C76-97BA-1838F24794E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

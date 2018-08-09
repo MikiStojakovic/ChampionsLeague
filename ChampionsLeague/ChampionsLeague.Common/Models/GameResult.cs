@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace ChampionsLeague.Models
+namespace ChampionsLeague.Common.Models
 {
     public class GameResult
     {

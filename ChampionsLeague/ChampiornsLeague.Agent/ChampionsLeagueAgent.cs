@@ -4,27 +4,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ChampionsLeague;
+using ChampionsLeague.Common.Abstract;
+using ChampionsLeague.Common.Models;
 
 namespace ChampiornsLeague.Agent
 {
-    public class ChampionsLeagueAgent : IDisposable
+    public class ChampionsLeagueAgent : ILeagueAgent, IDisposable
     {
         private IDisposable _webApp;
 
-        public void Start()
+        public void Start(Func<IDisposable> startWebApp)
         {
-            var hostUrl = ConfigurationManager.AppSettings["hostUrl"];
-            var publicDirectoryPath = ConfigurationManager.AppSettings["publicDirectoryPath"];
-
-            _webApp = ChampionsLeagueWebApp.Start(
-                hostUrl: hostUrl,
-                publicDirectoryPath: publicDirectoryPath);
+            _webApp = startWebApp();
         }
 
         public virtual void Dispose()
         {
             
+        }
+
+        public void ProcessGameResults(IEnumerable<GameResult> gameResults)
+        {
+            throw new NotImplementedException();
         }
     }
 }

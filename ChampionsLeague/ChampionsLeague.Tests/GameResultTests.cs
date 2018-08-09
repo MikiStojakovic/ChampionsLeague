@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Results;
 using ChampionsLeague.Controllers;
-using ChampionsLeague.Models;
+using ChampionsLeague.Common.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static System.Net.WebRequestMethods;
 

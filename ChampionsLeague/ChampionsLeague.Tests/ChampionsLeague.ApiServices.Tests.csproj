@@ -74,6 +74,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ChampionsLeague.Common\ChampionsLeague.Common.csproj">
+      <Project>{7d4d3746-55a8-4c76-97ba-1838f24794e7}</Project>
+      <Name>ChampionsLeague.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ChampionsLeague\ChampionsLeague.ApiServices.csproj">
       <Project>{65C0CEFB-0DE8-41F0-935F-CD505267B884}</Project>
       <Name>ChampionsLeague.ApiServices</Name>

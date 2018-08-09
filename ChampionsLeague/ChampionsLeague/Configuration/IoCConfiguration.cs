@@ -33,7 +33,9 @@ namespace ChampionsLeague.Configuration
 
         private static void RegisterDependencies(ContainerBuilder builder)
         {
-
+            //builder
+            //    .RegisterType<LocalizationRepository>()
+            //    .As<ILocalizationRepository>();
         }
         }
 }
