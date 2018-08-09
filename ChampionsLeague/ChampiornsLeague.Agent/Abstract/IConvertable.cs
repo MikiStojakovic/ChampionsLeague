@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChampionsLeague.Common.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace ChampiornsLeague.Agent.Abstract
 {
-    interface IConvertable
+    public interface IConvertable
     {
-        
+        IEnumerable<CompetitorResult> All(IEnumerable<GameResult> gameResults);
     }
 }

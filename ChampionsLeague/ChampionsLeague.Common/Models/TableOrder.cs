@@ -8,6 +8,7 @@ namespace ChampionsLeague.Common.Models
 {
     public class TableOrder
     {
+        public string GroupName { get; set; }
         public IList<CompetitorResult> TableRowCollection { get; set; }
     }
 }
