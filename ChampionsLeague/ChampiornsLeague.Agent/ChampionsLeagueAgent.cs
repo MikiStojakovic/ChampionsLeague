@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using ChampionsLeague.Common.Abstract;
 using ChampionsLeague.Common.Models;
 using ChampiornsLeague.Agent.Abstract;
+using ChampiornsLeague.Agent.Converters;
 
 namespace ChampiornsLeague.Agent
 {
@@ -14,9 +15,8 @@ namespace ChampiornsLeague.Agent
     {
         private IDisposable _webApp;
         public IDictionary<string, TableOrder> LeagueResults { get; set; }
-        private IConvertable _resultConverter { get; set; }
 
-        public ChampionsLeagueAgent(IConvertable resultConverter)
+        public ChampionsLeagueAgent()
         {
 
         }
@@ -33,8 +33,10 @@ namespace ChampiornsLeague.Agent
 
         public bool AddGameResults(IEnumerable<GameResult> gameResults)
         {
-            IsTableAdded(gameResults)
-                .All(x => x == x);
+            IsTableAdded(gameResults).
+                ConvertAll().
+                AddResultsToLeagueResults(LeagueResults)
+                ;
 
             return true;
         }
@@ -43,6 +45,8 @@ namespace ChampiornsLeague.Agent
         {
             return true;
         }
+
+        
 
         private IEnumerable<GameResult> IsTableAdded(IEnumerable<GameResult> gameResults)
         {

@@ -10,5 +10,10 @@ namespace ChampionsLeague.Common.Models
     {
         public string GroupName { get; set; }
         public IList<CompetitorResult> TableRowCollection { get; set; }
+
+        public void AddCompetiotorResult(CompetitorResult competitorResult)
+        {
+            this.TableRowCollection.Add(competitorResult);
+        }
     }
 }
