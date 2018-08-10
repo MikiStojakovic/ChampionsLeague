@@ -34,7 +34,7 @@ namespace ChampiornsLeague.Agent
         public bool AddGameResults(IEnumerable<GameResult> gameResults)
         {
             IsTableAdded(gameResults)
-                .All();
+                .All(x => x == x);
 
             return true;
         }
