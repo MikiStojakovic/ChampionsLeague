@@ -40,7 +40,7 @@ namespace ChampionsLeague.Tests
             var result = controller.Post(gameResult);
 
             //--Assert
-            Assert.IsInstanceOfType(result, typeof(OkNegotiatedContentResult<bool>));
+            Assert.AreEqual((result as OkNegotiatedContentResult<int>).Content, 2);
         }
     }
 }

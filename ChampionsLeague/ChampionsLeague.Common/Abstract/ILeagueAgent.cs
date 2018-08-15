@@ -9,6 +9,6 @@ namespace ChampionsLeague.Common.Abstract
 {
     public interface ILeagueAgent
     {
-        bool ProcessGameResults(IEnumerable<GameResult> gameResults);
+        int ProcessGameResults(IEnumerable<GameResult> gameResults);
     }
 }

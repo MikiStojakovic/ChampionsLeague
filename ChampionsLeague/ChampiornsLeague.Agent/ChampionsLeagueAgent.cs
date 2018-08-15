@@ -18,7 +18,7 @@ namespace ChampiornsLeague.Agent
 
         public ChampionsLeagueAgent()
         {
-
+            LeagueResults = new Dictionary<string, TableOrder>();
         }
 
         public void Start(Func<IDisposable> startWebApp)
@@ -31,24 +31,30 @@ namespace ChampiornsLeague.Agent
             
         }
 
-        public bool AddGameResults(IEnumerable<GameResult> gameResults)
+        public int AddGameResults(IEnumerable<GameResult> gameResults)
         {
-            IsTableAdded(gameResults).
-                ConvertAll().
+            IsTableAddedAlready(gameResults).
+                ConvertAllResults().
                 AddResultsToLeagueResults(LeagueResults)
                 ;
 
-            return true;
+            var r = LeagueResults.Select(kvp => kvp.Value.TableRowCollection).SelectMultiLayerCollection();
+            
+            var r1 = r.Count();
+            
+            //var r1 = r.Count();
+
+            return r1;
         }
 
-        public bool ProcessGameResults(IEnumerable<GameResult> gameResults)
+        public int ProcessGameResults(IEnumerable<GameResult> gameResults)
         {
-            return true;
+            return AddGameResults(gameResults);
         }
 
         
 
-        private IEnumerable<GameResult> IsTableAdded(IEnumerable<GameResult> gameResults)
+        private IEnumerable<GameResult> IsTableAddedAlready(IEnumerable<GameResult> gameResults)
         {
             gameResults
                 .Select(gr => gr.Group)

@@ -11,6 +11,11 @@ namespace ChampionsLeague.Common.Models
         public string GroupName { get; set; }
         public IList<CompetitorResult> TableRowCollection { get; set; }
 
+        public TableOrder()
+        {
+            TableRowCollection = new List<CompetitorResult>();
+        }
+
         public void AddCompetiotorResult(CompetitorResult competitorResult)
         {
             this.TableRowCollection.Add(competitorResult);
